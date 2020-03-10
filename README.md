@@ -57,7 +57,7 @@ Now if everything went as planned, reddit should be a valid reddit session. The 
 
 - Ruby
 - VSCode
-
+- REDD api wrapper for REDDIT (https://github.com/avinashbot/redd)
 
 To get a local copy up and running follow these simple example steps.
 
