@@ -36,6 +36,9 @@ class APPVariables
       def hash_url(word, post)
         @keyword_hash[word.to_sym][:url] = post.url
       end
+      def hash_comments(word, post)
+        @keyword_hash[word.to_sym][:comments] = post.comments[0].body unless post.comments[0].nil?
+      end
 
 
     
