@@ -13,6 +13,10 @@ class APPVariables
         @subreddit = @login.reddit.subreddit('All')
     end
 
+    def select_subreddit(subreddit)
+        @subreddit = login.reddit.subreddit(subreddit) # 'All' is the subreddit to search inside
+    end
+
 
 
     
