@@ -21,6 +21,10 @@ class APPVariables
         @keyword_hash.each_with_index {|i,index|  p "#{index}. #{i[1][:title]}"}
       end
 
+      def set_query(keyword)
+        @searchquery = @subreddit.search(keyword,limit:2, :time => 'hour') #search post from last 'hour' only
+      end
+
 
 
     
