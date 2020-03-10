@@ -27,7 +27,9 @@ class APPVariables
       def create_hash(word)
         @keyword_hash[word.to_sym] = Hash.new
       end
-
+      def hash_title(word, post)
+        @keyword_hash[word.to_sym][:title] = post.title
+      end
 
 
     
