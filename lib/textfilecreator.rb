@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# saves all information to a text file
 class TextFile
   def initialize(hash)
     @hash = hash
@@ -7,11 +8,11 @@ class TextFile
 
   def write_to_textfile
     File.open('./test_list.txt', 'a') do |line|
-      line.puts "\r" + '<----------Start of Search----------> ' + 'Date: ' + Time.now.to_s
+      line.puts "\r" + '<--Start of Search--> ' + 'Date: ' + Time.now.to_s
       @hash.each do |p|
         line.puts "\r" + p.to_s
       end
-      line.puts "\r" + '<----------End of Search---------->'
+      line.puts "\r" + '<--End of Search-->'
     end
   end
 end

@@ -2,7 +2,7 @@
 
 require 'bundler/setup'
 require 'redd'
-
+# handles all api login information
 class RedditInfo
   attr_reader :reddit
   def initialize

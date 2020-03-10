@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# handles all api information
 class APPVariables
   require './lib/login.rb'
   require 'bundler/setup'
@@ -10,23 +11,33 @@ class APPVariables
   attr_reader :subreddit, :searchquery, :login
   def initialize
     @keyword_hash = {}
-    @prevention_keywords = ['tragedy', 'dissatisfaction', 'stress',
-                            'exhausted', 'anxiey', 'suffering', 'despair', 'pain', 'worry',
-                            'fear', 'hope', 'happy', 'feel lonely', 'feel sad', 'be happy',
-                            'go crazy', 'feel alone', 'my life', 'kill', 'kill myself']
+    @prevention_keywords =
+      ['tragedy', 'dissatisfaction', 'stress',
+       'exhausted', 'anxiey', 'suffering', 'despair', 'pain', 'worry',
+       'fear', 'hope', 'happy', 'feel lonely', 'feel sad', 'be happy',
+       'go crazy', 'feel alone', 'my life', 'kill', 'kill myself']
     @login = RedditInfo.new
     @subreddit = @login.reddit.subreddit('All')
   end
 
-  def select_subreddit(subreddit)
-    @subreddit = login.reddit.subreddit(subreddit)
+  def each_keyword
+    @prevention_keywords.each do |word|
+      query(word)
+      each_search_query(word)
+    end
   end
 
   def print_titles
     @keyword_hash.each_with_index { |i, index| p "#{index}. #{i[1][:title]}" }
   end
 
-  def set_query(keyword)
+  private
+  
+  def select_subreddit(subreddit)
+    @subreddit = login.reddit.subreddit(subreddit)
+  end
+
+  def query(keyword)
     @searchquery = @subreddit.search(keyword, limit: 2, time: 'hour')
   end
 
@@ -45,7 +56,7 @@ class APPVariables
     @keyword_hash[word.to_sym] = {}
   end
 
-  def hash_title(word, post)  
+  def hash_title(word, post)
     @keyword_hash[word.to_sym][:title] = post.title
   end
 
@@ -58,19 +69,14 @@ class APPVariables
   end
 
   def hash_comments(word, post)
-    unless post.comments[0].nil?
-      @keyword_hash[word.to_sym][:comments] = post.comments[0].body
-        end
+    return if post.comments[0].nil?
+
+    @keyword_hash[word.to_sym][:comments] = post.comments[0].body
   end
 
   def hash_subreddit(word, post)
     @keyword_hash[word.to_sym][:subreddit_name] = post.subreddit_name_prefixed
   end
 
-  def each_keyword
-    @prevention_keywords.each do |word|
-      set_query(word)
-      each_search_query(word)
-    end
-  end
+
 end
