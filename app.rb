@@ -11,3 +11,18 @@ require 'redd'
   puts "Here are some postings with matching keywords from reddit in the last hour..."
   sleep(0.3)
   puts '...loading please wait...'
+
+
+  words_array_and_hash = APPVariables.new()
+
+  words_array_and_hash.each_keyword()
+
+  words_array_and_hash.print_titles
+
+
+  p ''
+  puts "text file has been updated to include links for above posts and other information "
+  p ''
+  puts "It's your job to discern which posts are alarming, use the text file to find a link and post a reply."
+  p ''
+  puts "if the url isn't working , copy the title string from the text file and do a manual search on reddit"
