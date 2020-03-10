@@ -3,9 +3,10 @@
    1.Quickly search reddit for a large list of keywords not normally possible through the website
    2.There's a list of words we'll search for that have been associated with people who have suicidal thoughts
    With this program we can quickly find posts in reddit from the last hour of distressed people
-   The intention is to help those suffering from depression. 
+   my intention for building this program is to help those suffering from depression. 
    In future updates i want to add the functionality of being able to reply to those posts directly
    with custom or pre-written up-lifting comments.
+
 
 
 # GUIDE FOR Suicide prevention: supporting someone online
@@ -69,8 +70,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage
    1. Clone this repository
-   2. To run the code go to the local folder where you have cloned the repository and run in the terminal $ bundle install
-   3. To start the program while still in the local folder run *Ruby file* in the terminal `$ ruby app.rb` 
+   2. Install dependencies , inside thelocal folder where you have cloned the repository, run in the terminal $ bundle install
+   3. To start the program while still in the local folder, in the terminal `$ ruby app.rb` 
 
 ## Author
 
