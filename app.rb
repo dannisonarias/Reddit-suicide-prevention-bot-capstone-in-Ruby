@@ -22,6 +22,10 @@ words_array_and_hash.each_keyword
 
 words_array_and_hash.print_titles
 
+text_file = TextFile.new(words_array_and_hash.keyword_hash)
+
+text_file.write_to_textfile
+
 p ''
 puts 'text file has been updated to include links for above posts and other information '
 p ''

@@ -2,9 +2,12 @@
 
 class APPVariables
   require './lib/login.rb'
+  require 'bundler/setup'
+  require 'pry'
+  require './lib/textfilecreator.rb'
 
   attr_accessor :prevention_keywords, :keyword_hash
-  attr_reader :subreddit, :searchquery
+  attr_reader :subreddit, :searchquery, :login
   def initialize
     @keyword_hash = {}
     @prevention_keywords = ['tragedy', 'dissatisfaction', 'stress',
@@ -16,7 +19,7 @@ class APPVariables
   end
 
   def select_subreddit(subreddit)
-    @subreddit = login.reddit.subreddit(subreddit) # 'All' is the subreddit to search inside
+    @subreddit = login.reddit.subreddit(subreddit)
   end
 
   def print_titles
@@ -24,7 +27,7 @@ class APPVariables
   end
 
   def set_query(keyword)
-    @searchquery = @subreddit.search(keyword, limit: 2, time: 'hour') # search post from last 'hour' only
+    @searchquery = @subreddit.search(keyword, limit: 2, time: 'hour')
   end
 
   def each_search_query(word)
@@ -42,7 +45,7 @@ class APPVariables
     @keyword_hash[word.to_sym] = {}
   end
 
-  def hash_title(word, post)
+  def hash_title(word, post)  
     @keyword_hash[word.to_sym][:title] = post.title
   end
 
