@@ -24,6 +24,16 @@ class APPVariables
       def set_query(keyword)
         @searchquery = @subreddit.search(keyword,limit:2, :time => 'hour') #search post from last 'hour' only
       end
+      def each_search_query(word)
+        @searchquery.each do |post|
+            create_hash(word)
+            hash_title(word, post)
+            hash_author(word, post)
+            hash_url(word, post)
+            hash_comments(word, post)
+            hash_subreddit(word, post)
+        end
+      end 
       def create_hash(word)
         @keyword_hash[word.to_sym] = Hash.new
       end
