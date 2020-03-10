@@ -33,6 +33,9 @@ class APPVariables
       def hash_author(word, post)
         @keyword_hash[word.to_sym][:author_id] = post.author_fullname
       end
+      def hash_url(word, post)
+        @keyword_hash[word.to_sym][:url] = post.url
+      end
 
 
     
