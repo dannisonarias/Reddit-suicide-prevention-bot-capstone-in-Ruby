@@ -17,6 +17,10 @@ class APPVariables
         @subreddit = login.reddit.subreddit(subreddit) # 'All' is the subreddit to search inside
     end
 
+    def print_titles()
+        @keyword_hash.each_with_index {|i,index|  p "#{index}. #{i[1][:title]}"}
+      end
+
 
 
     
