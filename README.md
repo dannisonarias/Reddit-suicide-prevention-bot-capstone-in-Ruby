@@ -20,7 +20,7 @@
   If they do want to chat, do your best to be there for them and listen, but realise that you don’t need to have all the answers. Be gentle, compassionate, and non-judgemental. Take them seriously, and let them know you care."
 > 
 
-![screenshot](app/app_screenshot.png)
+![screenshot](./screenshots/app_screenshot.png)
 
 # Creating a custom reddit developer account
 Step 1: Creating an Application
