@@ -39,6 +39,9 @@ class APPVariables
       def hash_comments(word, post)
         @keyword_hash[word.to_sym][:comments] = post.comments[0].body unless post.comments[0].nil?
       end
+      def hash_subreddit(word, post)
+        @keyword_hash[word.to_sym][:subreddit_name] = post.subreddit_name_prefixed
+      end
 
 
     
