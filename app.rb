@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 require 'bundler/setup'
 require 'redd'
+require './lib/login.rb'
+require './lib/logic.rb'
+require './lib/textfilecreator.rb'
 
 
   puts "Hello! , Welcome to the suicide prevention ruby program \n"
