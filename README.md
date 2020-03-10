@@ -36,6 +36,8 @@ Go ahead and install Ruby if you haven't already. Most package managers have a p
 While you can just run gem install redd and call it a day, we're going to use Bundler like the resposible Rubyist we are.
 
  $ bundle install
+
+(TSE can skip this test i have added a preconfig to save you time)
 Step 4: Test Drive
 inside the login.rb file make sure you update the information below if you decided to create your own reddit account.
 reddit = Redd.it(
@@ -67,7 +69,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage
    1. Clone this repository
-   2. To run the code go to the local folder where you have the *Ruby file* and run in the terminal `$ ruby app.rb` 
+   2. To run the code go to the local folder where you have cloned the repository and run in the terminal $ bundle install
+   3. To start the program while still in the local folder run *Ruby file* in the terminal `$ ruby app.rb` 
 
 ## Author
 
