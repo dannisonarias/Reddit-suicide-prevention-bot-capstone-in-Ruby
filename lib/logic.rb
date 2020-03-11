@@ -2,13 +2,12 @@
 
 # handles all api information
 class APPVariables
-  require './lib/login.rb'
+  require_relative 'login.rb'
   require 'bundler/setup'
   require 'pry'
-  require './lib/textfilecreator.rb'
+  require_relative 'textfilecreator.rb'
 
-  attr_accessor :prevention_keywords, :keyword_hash
-  attr_reader :subreddit, :searchquery, :login
+  attr_reader :subreddit, :login,:prevention_keywords, :keyword_hash #Rspec needs readers
   def initialize
     @keyword_hash = {}
     @prevention_keywords =
