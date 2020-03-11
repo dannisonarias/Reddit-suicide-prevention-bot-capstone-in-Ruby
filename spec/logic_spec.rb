@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './lib/logic.rb'
+require_relative '../lib/logic.rb'
 
 RSpec.describe APPVariables do
   let(:array1) { format(w, 'dog', 'cat', 'bird') }

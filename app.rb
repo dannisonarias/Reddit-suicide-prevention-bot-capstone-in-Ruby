@@ -3,9 +3,9 @@
 
 require 'bundler/setup'
 require 'redd'
-require './lib/login.rb'
-require './lib/logic.rb'
-require './lib/textfilecreator.rb'
+require_relative './lib/login.rb'
+require_relative './lib/logic.rb'
+require_relative './lib/textfilecreator.rb'
 
 puts 'Hello! , Welcome to the suicide prevention ruby program'
 puts 'Read the README file for a guide on how to help people.'
