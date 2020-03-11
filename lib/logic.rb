@@ -6,8 +6,8 @@ class APPVariables
   require 'bundler/setup'
   require 'pry'
   require_relative 'text_file_creator.rb'
-
-  attr_reader :subreddit, :login,:prevention_keywords, :keyword_hash #Rspec needs readers
+  # Rspec needs readers
+  attr_reader :subreddit, :login, :prevention_keywords, :keyword_hash
   def initialize
     @keyword_hash = {}
     @prevention_keywords =
