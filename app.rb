@@ -5,7 +5,7 @@ require 'bundler/setup'
 require 'redd'
 require_relative './lib/login.rb'
 require_relative './lib/logic.rb'
-require_relative './lib/textfilecreator.rb'
+require_relative './lib/text_file_creator.rb'
 
 puts 'Hello! , Welcome to the suicide prevention ruby program'
 puts 'Read the README file for a guide on how to help people.'

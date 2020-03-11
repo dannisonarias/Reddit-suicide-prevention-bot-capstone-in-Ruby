@@ -5,7 +5,7 @@ class APPVariables
   require_relative 'login.rb'
   require 'bundler/setup'
   require 'pry'
-  require_relative 'textfilecreator.rb'
+  require_relative 'text_file_creator.rb'
 
   attr_reader :subreddit, :login,:prevention_keywords, :keyword_hash #Rspec needs readers
   def initialize
