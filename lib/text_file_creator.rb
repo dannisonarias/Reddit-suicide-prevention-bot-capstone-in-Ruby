@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # saves all information to a text file
 class TextFile
   def initialize(hash)

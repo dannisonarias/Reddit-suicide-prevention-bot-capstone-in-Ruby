@@ -1,12 +1,17 @@
-# frozen_string_literal: true
-
 require_relative '../lib/logic.rb'
 
 RSpec.describe APPVariables do
-  let(:array1) { format(w, 'dog', 'cat', 'bird') }
   let(:test1) { APPVariables.new }
 
-  describe 'APPvariables initialize ' do
+  describe 'APPvariables' do
+    it 'method keyword_hash.each_with_index with no errors' do
+      expect(test1.print_titles).to eql(true)
+    end
+
+    it 'public method  each_keyword to call other methods' do
+      expect(test1.each_keyword).to eql(true) # test takes one minute to load
+    end
+
     it 'Initializing an instance class of APPvariables' do
       expect(test1.keyword_hash).to eql({})
     end

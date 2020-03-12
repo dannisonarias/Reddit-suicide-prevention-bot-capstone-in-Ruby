@@ -1,10 +1,9 @@
-# frozen_string_literal: true
-
 # handles all api information
 class APPVariables
   require_relative 'login.rb'
   require 'bundler/setup'
   require 'pry'
+  require 'pry-nav'
   require_relative 'text_file_creator.rb'
   # Rspec needs readers
   attr_reader :subreddit, :login, :prevention_keywords, :keyword_hash
@@ -24,10 +23,12 @@ class APPVariables
       query(word)
       each_search_query(word)
     end
+    true if @keyword_hash != {} # for rspec
   end
 
   def print_titles
     @keyword_hash.each_with_index { |i, index| p "#{index}. #{i[1][:title]}" }
+    true # for rspec
   end
 
   private
