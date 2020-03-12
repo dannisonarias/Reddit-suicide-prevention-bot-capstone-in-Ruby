@@ -1,5 +1,3 @@
-# Throwaway account created for the TSE reviewers to save time
- Skip steps in Creating a custom reddit developer account
 # Object oriented design with Ruby : Suicide Prevention Reddit Ruby Bot
    What problems does this program solve?
    1. Quickly search reddit for a large list of keywords not normally possible through the website
