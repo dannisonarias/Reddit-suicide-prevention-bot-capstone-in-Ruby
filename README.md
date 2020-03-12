@@ -35,7 +35,11 @@ This step is important! Go to the application you and add the bot's username as 
 3.  Installing Redd
 Go ahead and install Ruby if you haven't already. Most package managers have a pretty recent version of Ruby up. The latest version at the time of writing is 2.4.1. Redd supports Ruby versions 2.1.0 and up, but it's recommended to get the latest version, since I'll probably stop supporting older versions as time passes.
 
-**While you can just run gem install redd and call it a day, we're going to use Bundler like the resposible Rubyist we are.**
+**While you can just run **
+
+> gem install redd 
+ 
+ **and call it a day, we're going to use Bundler like the resposible Rubyist we are.**
 
 > $ bundle install
 
